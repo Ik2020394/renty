@@ -37,7 +37,7 @@ class _CarOptionScreenState extends State<CarOptionScreen> {
         'transmission': 'Automatic',
         'airbags': 'Yes',
       },
-       {
+      {
         'name': 'ford',
         'image': '../../assets/sven.jpg',
         'price': 120.0,
@@ -105,7 +105,6 @@ class _CarOptionScreenState extends State<CarOptionScreen> {
             ListTile(
               leading: const Icon(Icons.history),
               title: const Text('Historique'),
-              
               onTap: () {
                 // Naviguez ou ajoutez une action
               },
@@ -165,7 +164,8 @@ class _CarOptionScreenState extends State<CarOptionScreen> {
                 );
               },
               child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                 decoration: BoxDecoration(
                   color: Colors.white, // Fond blanc
                   border: Border.all(color: Colors.grey),
@@ -241,7 +241,8 @@ class _CarOptionScreenState extends State<CarOptionScreen> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 8.0),
                             child: Text(
                               '\$${car['price']} / day',
                               style: const TextStyle(

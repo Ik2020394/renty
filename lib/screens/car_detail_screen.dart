@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'reservation_screen.dart'; // Importez la page de réservation ici.
 
 class CarDetailScreen extends StatelessWidget {
   final Map<String, dynamic> car;
@@ -64,13 +65,19 @@ class CarDetailScreen extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('${car['name']} rental confirmed!')),
+                // Navigation vers la page de réservation avec les données de la voiture
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ReservationScreen(
+                      car: car, // Passer les données de la voiture
+                    ),
+                  ),
                 );
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.yellow,
-                padding: const EdgeInsets.symmetric(vertical: 15),
+                padding: const EdgeInsets.symmetric(vertical: 25),
                 textStyle: const TextStyle(fontSize: 18),
               ),
               child: const Text('Réserver maintenant'),
